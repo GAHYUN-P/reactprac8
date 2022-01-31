@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from "react-router-dom";
+import Home from "./Home"
+import Cat from "./Cat"
+import Dog from "./Dog"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route path="/" exact>
+        {/* exact 속성이 없으면 포함하면 다보여줌
+        들어가게 되면 패스가 완전히 똑같으면 보여줌! */}
+        <Home/>
+      </Route>
+      <Route path="/cat">
+        <Cat/>
+      </Route>
+      <Route path="/dog">
+        <Dog/>
+      </Route>
     </div>
   );
 }
