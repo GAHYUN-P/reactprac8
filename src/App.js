@@ -12,9 +12,9 @@ function App() {
         <Home data = {"im data"}/>
         {/* 페이지에 데이터 주는 법 */}
       </Route>
-      <Route path="/cat/:cat_name">
+      <Route path="/cat/:cat_name" component={Cat}>
         {/* 동적라우팅 /:변수명 */}
-        <Cat/>
+        {/* <Cat/> */}
       </Route>
       <Route path="/dog">
         <Dog/>
