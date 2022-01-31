@@ -21,8 +21,8 @@ function App() {
         {/* 동적라우팅 /:변수명 */}
         {/* <Cat/> */}
       </Route>
-      <Route path="/dog">
-        <Dog/>
+      <Route path="/dog" component={Dog}>
+        {/* <Dog/> */}
       </Route>
     </div>
   );
