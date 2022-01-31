@@ -9,9 +9,11 @@ function App() {
       <Route path="/" exact>
         {/* exact 속성이 없으면 포함하면 다보여줌
         들어가게 되면 패스가 완전히 똑같으면 보여줌! */}
-        <Home/>
+        <Home data = {"im data"}/>
+        {/* 페이지에 데이터 주는 법 */}
       </Route>
-      <Route path="/cat">
+      <Route path="/cat/:cat_name">
+        {/* 동적라우팅 /:변수명 */}
         <Cat/>
       </Route>
       <Route path="/dog">
